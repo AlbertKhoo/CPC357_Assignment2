@@ -17,10 +17,10 @@
 | File / Folder | Description |
 | :--- | :--- |
 | `FlowGuard.ino` | Main firmware for ESP32. Handles sensor reading, logic, and MQTT publishing. |
-| `secrets.h` | (Template) C++ header file for managing WiFi & MQTT credentials on the ESP32. |
+| `sample_secrets.h` | (Template) C++ header file for managing WiFi & MQTT credentials on the ESP32. |
 | `bridge.py` | Python middleware that bridges MQTT data to MongoDB and V-ONE Cloud. |
 | `flowguard-bridge.service` | Systemd service file to run the bridge script as a background daemon on Linux. |
-| `.env` | (Template) Environment variables file for Python secrets management. |
+| `.sample.env` | (Template) Environment variables file for Python secrets management. |
 
 ---
 
