@@ -1,0 +1,20 @@
+[Unit]
+Description=FlowGuard MQTT Bridge Service
+After=network.target mosquitto.service mongod.service
+# "After" ensures this starts ONLY after Network, MQTT, and Database are ready.
+
+[Service]
+Type=simple
+User=axlerchin7226
+WorkingDirectory=/home/axlerchin7226
+
+# Command to run (Python Path + Script Path)
+ExecStart= /usr/bin/python3 /home/axlerchin7226/bridge.py
+EnvironmentFile= -home/axlerchin7226/.env
+
+# Restart behavior: If it crashes, wait 5s and restart automatically
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
